@@ -1008,7 +1008,7 @@
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-       
+        Designed by <a href="Arnaud">Arnaud</a>
       </div>
     </div>
 
@@ -1031,7 +1031,132 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>WhatsApp Chat</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+  
+      /* WhatsApp Floating Button */
+      #whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000;
+        background-color: #25D366;
+        padding: 16px;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        width: 65px;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      #whatsapp-button img {
+        width: 36px;
+        height: 36px;
+      }
+  
+      /* WhatsApp Chat Box */
+      #whatsapp-chat-box {
+        display: none;
+        position: fixed;
+        bottom: 95px;
+        left: 20px;
+        width: 280px;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        font-family: Arial, sans-serif;
+        z-index: 1000;
+        overflow: hidden;
+      }
+  
+      .chat-header {
+        background-color: #25D366;
+        color: white;
+        padding: 12px;
+        font-weight: bold;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      .chat-header img {
+        width: 20px;
+        margin-right: 8px;
+      }
+  
+      .chat-message {
+        background-color: #f5f5f5;
+        padding: 15px;
+        font-size: 14px;
+        color: #333;
+      }
+  
+      .chat-open-button {
+        display: block;
+        background-color: #25D366;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        border-top: 1px solid #ddd;
+      }
+  
+      #close-chat {
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+  
+  <!-- Floating WhatsApp Button -->
+  <div id="whatsapp-button">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Icon" />
+  </div>
+  
+  <!-- WhatsApp Chat Popup -->
+  <div id="whatsapp-chat-box">
+    <div class="chat-header">
+      <span><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt=""> WhatsApp</span>
+      <span id="close-chat">×</span>
+    </div>
+    <div class="chat-message">
+      <p>Hello!<br>Can we help you?</p>
+    </div>
+    <a href="https://wa.me/237696126152" target="_blank" class="chat-open-button">Open chat</a>
+  </div>
+  
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("whatsapp-button").addEventListener("click", function () {
+      document.getElementById("whatsapp-chat-box").style.display = "block";
+    });
+  
+    document.getElementById("close-chat").addEventListener("click", function () {
+      document.getElementById("whatsapp-chat-box").style.display = "none";
+    });
+  </script>
+  
+  </body>
+  </html>
+  
 </body>
 
 </html>
